@@ -3,7 +3,7 @@ import { PROJECTS } from '../constants';
 
 const Work: React.FC = () => {
   return (
-    <section className="bg-phunk-dark py-20 lg:py-32 text-white relative">
+    <section className="bg-phunk-dark py-20 lg:py-32 text-white relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         <div className="mb-20 max-w-2xl">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">

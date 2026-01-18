@@ -3,7 +3,7 @@ import { SERVICES } from '../constants';
 
 const Services: React.FC = () => {
   return (
-    <section className="py-20 relative z-10 selection:bg-phunk-cyan selection:text-white">
+    <section className="py-20 relative z-10 bg-[#050505] overflow-hidden selection:bg-phunk-cyan selection:text-white">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="mb-16 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">

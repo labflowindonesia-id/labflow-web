@@ -27,7 +27,7 @@ const WhyUs: React.FC = () => {
   const prevSlide = () => setActiveIndex((prev) => (prev - 1 + REASONS.length) % REASONS.length);
 
   return (
-    <section className="py-12 relative overflow-hidden z-20">
+    <section className="py-12 relative overflow-hidden z-20 bg-[#050505]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
 
         {/* Navigation Header - Optional per design but good for spacing */}

@@ -26,10 +26,43 @@ const Intro: React.FC = () => {
               Hire Flo
             </a>
           </div>
-          <div className="order-1 lg:order-2 relative flex justify-center">
-            <div className="relative w-full max-w-[500px] aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-tr from-phunk-cyan/10 to-phunk-blue/10 rounded-full blur-2xl"></div>
-              <img src={ASSETS.robot} alt="Phunk Robot" className="relative z-10 w-full h-full object-contain drop-shadow-2xl" />
+          <div className="order-1 lg:order-2 relative flex justify-center perspective-1000">
+            <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center">
+
+              {/* Back Grid Effect */}
+              <div
+                className="absolute inset-0 z-0 opacity-30 rounded-full overflow-hidden"
+                style={{
+                  backgroundImage: `
+                    linear-gradient(to right, rgba(0, 229, 209, 0.2) 1px, transparent 1px), 
+                    linear-gradient(to bottom, rgba(0, 229, 209, 0.2) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '40px 40px',
+                  maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
+                  WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
+                }}
+              ></div>
+
+              {/* Stronger Blue Glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-phunk-cyan/30 to-phunk-blue/30 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-phunk-blue/20 blur-[100px] -z-10"></div>
+
+              {/* Floating Robot */}
+              <motion.img
+                src={ASSETS.robot}
+                alt="Phunk Robot"
+                className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(37,173,249,0.4)]"
+                animate={{
+                  y: [-25, 25, -25],
+                  rotate: [0, 2, -2, 0],
+                  scale: [1, 1.02, 1]
+                }}
+                transition={{
+                  duration: 6,
+                  ease: "easeInOut",
+                  repeat: Infinity
+                }}
+              />
             </div>
           </div>
         </div>
