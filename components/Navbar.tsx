@@ -24,7 +24,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
     { name: 'Home', id: 'home', path: '/' },
     { name: 'About Us', id: 'about', path: '/about' },
     { name: 'Services', id: 'services', path: '/services' },
-    { name: 'Projects', id: 'projects', path: '#' },
     { name: 'News', id: 'news', path: '#' },
     { name: 'Webflow', id: 'webflow', path: '#' },
   ];
@@ -50,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               key={link.name}
               href={link.path}
               onClick={(e) => {
-                if (link.id !== 'projects' && link.id !== 'news' && link.id !== 'webflow') {
+                if (link.id !== 'news' && link.id !== 'webflow') {
                   handleNavClick(e, link.id);
                 } else {
                   e.preventDefault();
@@ -98,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               key={link.name}
               href={link.path}
               onClick={(e) => {
-                if (link.id !== 'projects' && link.id !== 'news' && link.id !== 'webflow') handleNavClick(e, link.id);
+                if (link.id !== 'news' && link.id !== 'webflow') handleNavClick(e, link.id);
                 else setIsMenuOpen(false);
               }}
               className="text-3xl font-bold text-white hover:text-phunk-cyan transition-colors"
