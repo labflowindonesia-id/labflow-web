@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   return (
     <>
       {/* Desktop Navbar Container */}
-      <nav className={`hidden lg:flex fixed w-full z-50 top-[24px] transition-all duration-300 py-2 px-12 items-center justify-between`}>
+      <nav className={`hidden lg:flex absolute w-full z-50 top-0 transition-all duration-300 py-6 px-12 items-center justify-between`}>
 
         {/* Left: Logo with Glow */}
         <a href="/" onClick={(e) => handleNavClick(e, 'home')} className="relative z-50">
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
       </nav>
 
       {/* Mobile Navbar (Standard for usability) */}
-      <nav className="lg:hidden fixed top-0 w-full z-50 bg-[#050505]/95 backdrop-blur-sm p-4 flex justify-between items-center border-b border-white/10">
+      <nav className="lg:hidden absolute top-0 w-full z-50 bg-[#050505]/95 backdrop-blur-sm p-4 flex justify-between items-center border-b border-white/10">
         <div className="w-10 overflow-hidden">
           {/* Simple Logo Placeholder since we might assume logo is globally present or needed for mobile */}
           {ASSETS.logo}
