@@ -9,6 +9,7 @@ export const ASSETS = {
   heroGraphic: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/650233d59b9a7a16b10beb85_Group%2069.svg",
   heroStars: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/650347cc5ff83f6f05a40af2_Group%2060.svg",
   heroPattern: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65363b2d9ea7b7c5f9c07406_Grid.svg",
+  heroBg: "/resources/lab-hero.png",
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -37,47 +38,41 @@ export const SERVICES: ServiceItem[] = [
 
 export const PROJECTS: ProjectItem[] = [
   {
-    title: "Drivelodge",
-    description: "Founded as a passion project by enthusiasts David and Joanne, Drivelodge has built on its reputation for crafting high-quality high-top and elevating camper van roofs.",
-    tags: ["Web Design/Development", "UI/UX Design", "Configurator"],
-    image: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/68c13393a3119407825526b7_Graph.avif",
+    title: "LabFlow Assets",
+    description: "Monitoring aset menyeluruh dengan jejak audit (audit trail) lengkap. Lacak siklus hidup instrumen dari kalibrasi hingga maintenance, serta manajemen reagen dari pemesanan hingga pemusnahan secara real-time dibantu oleh Flo",
+    tags: ["Asset Monitoring", "Audit Trail", "Automation"],
+    image: "/resources/labflow-work1.png",
     link: "#"
   },
   {
-    title: "Hacien",
-    description: "HACIEN is a premium tequila brand supplying high-end hospitality and retail locations worldwide. They approached Phunk to undertake a comprehensive design project.",
-    tags: ["Webflow Development", "UI/UX Design", "Graphic Design"],
-    image: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65411cf4f8251ab33a7d442b_HACIEN%20Thumbnail.webp",
+    title: "AI Integrated LIMS",
+    description: "Sistem LIMS custom yang beradaptasi dengan SOP Anda, bukan sebaliknya. Dilengkapi flow otomatis dari quotation hingga customer portal, skill matrix analis, dan compliance ISO 17025.",
+    tags: ["ISO 17025", "Custom LIMS", "Flexibility"],
+    image: "/resources/labflow-work2.PNG",
     link: "#"
   },
   {
-    title: "Mobilleo",
-    description: "Mobilleo is a SaaS solution making it easy for organisations to manage global business travel for their employees.",
-    tags: ["Splash Screens", "Illustrations", "Lottie Animations"],
-    image: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65411d0755e48e6b5ec08e9a_Mobilio%20Thumbnail.webp",
+    title: "Flo - AI Chatbot",
+    description: "Asisten AI pribadi yang memahami konteks laboratorium Anda. Flo membantu membaca stok inventori, memberikan panduan berbasis manual book/MSDS, dan membuat laporan performa tanpa mengkompromikan keamanan data.",
+    tags: ["Private AI", "Safety Assistant", "Instructor"],
+    image: "/resources/labflow-work3.png",
     link: "#"
   }
 ];
 
 export const TESTIMONIALS: TestimonialItem[] = [
   {
-    name: "Josh Gudgeon",
-    role: "Breaking Bread",
-    image: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65367dca7a29e74cf679b061_61e6ed77c904254d16048ee3_1612423437659-p-500.webp",
-    quote: "Phunk Creative recently delivered on the branding of our new podcast. The team were responsive, professional & a real pleasure to work with."
+    name: "Ivan Sarifudin",
+    role: "Founder & CEO of Labmania Indonesia",
+    image: "/resources/profile-1.png",
+    quote: "LabFlow mampu memecahkan masalah alur kerja kami, menjadi lebih efisien. Visi LabFlow ini sangat baik kedepannya, saya tidak sabar untuk menunggu project selanjutnya."
   },
   {
-    name: "Sarah Baugh",
-    role: "Get Dynamic",
-    image: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65367dca71de9b7b0c5f5dbf_61e6ee1171a9ee244c4cb9a7_1642174119631-p-500.webp",
-    quote: "Our new website is so cool, really engaging and user friendly. Will definitely be using them again on future projects."
+    name: "Ayu Melinda",
+    role: "Trainer at Labmania Indonesia",
+    image: "/resources/profile-2.png",
+    quote: "Efisiensi kerja kami meningkat lebih dari 30% dan human-error team kami hampir hilang. Sebuah transformasi digital yang nyata."
   },
-  {
-    name: "Stuart Crowder",
-    role: "Mannson Freight",
-    image: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65367dc97e9a87b13a2d3999_61e6ecef59d0b04f7727fb97_003.webp",
-    quote: "Our brand means the world to us and if yours does too then we could not recommend any other partner more highly than Phunk Creative."
-  }
 ];
 
 export const BRANDS: BrandItem[] = [

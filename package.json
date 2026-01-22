@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "framer-motion": "^12.26.2",
+    "framer-motion": "^12.27.2",
     "fs": "^0.0.1-security",
     "lucide-react": "^0.562.0",
     "puppeteer": "^24.35.0",

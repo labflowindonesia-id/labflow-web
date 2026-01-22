@@ -7,7 +7,7 @@ const Intro: React.FC = () => {
     <section className="py-20 lg:py-32 relative overflow-hidden">
 
       {/* Side Blue Glow */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-[500px] h-[500px] bg-phunk-cyan/20 blur-[120px] rounded-full -translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-[500px] h-[500px] bg-phunk-cyan/20 blur-3xl rounded-full -translate-x-1/2 pointer-events-none"></div>
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -43,9 +43,9 @@ const Intro: React.FC = () => {
                 }}
               ></div>
 
-              {/* Stronger Blue Glow */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-phunk-cyan/30 to-phunk-blue/30 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-phunk-blue/20 blur-[100px] -z-10"></div>
+              {/* Stronger Blue Glow - Optimized */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-phunk-cyan/30 to-phunk-blue/30 rounded-full blur-2xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-phunk-blue/20 blur-3xl -z-10"></div>
 
               {/* Floating Robot */}
               <motion.img

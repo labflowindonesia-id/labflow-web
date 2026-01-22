@@ -15,17 +15,27 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
   const handleNavClick = (e: React.MouseEvent, page: string) => {
     e.preventDefault();
-    onNavigate(page);
+
+    if (page === 'services') {
+      onNavigate('home');
+      setTimeout(() => {
+        const workSection = document.getElementById('work');
+        if (workSection) {
+          workSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      onNavigate(page);
+      window.scrollTo(0, 0);
+    }
     setIsMenuOpen(false);
-    window.scrollTo(0, 0);
   };
 
   const navLinks = [
     { name: 'Home', id: 'home', path: '/' },
     { name: 'About Us', id: 'about', path: '/about' },
-    { name: 'Services', id: 'services', path: '/services' },
-    { name: 'News', id: 'news', path: '#' },
-    { name: 'Webflow', id: 'webflow', path: '#' },
+    { name: 'Services', id: 'services', path: '/#work' },
+    { name: 'Contacts', id: 'contact', path: '/contact' },
   ];
 
   return (
@@ -49,11 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               key={link.name}
               href={link.path}
               onClick={(e) => {
-                if (link.id !== 'news' && link.id !== 'webflow') {
-                  handleNavClick(e, link.id);
-                } else {
-                  e.preventDefault();
-                }
+                handleNavClick(e, link.id);
               }}
               className={`text-base font-medium transition-colors hover:text-phunk-cyan ${currentPage === link.id ? 'text-white' : 'text-gray-300'}`}
             >
@@ -97,8 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               key={link.name}
               href={link.path}
               onClick={(e) => {
-                if (link.id !== 'news' && link.id !== 'webflow') handleNavClick(e, link.id);
-                else setIsMenuOpen(false);
+                handleNavClick(e, link.id);
               }}
               className="text-3xl font-bold text-white hover:text-phunk-cyan transition-colors"
             >

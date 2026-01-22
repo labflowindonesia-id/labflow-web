@@ -43,6 +43,7 @@ const Services: React.FC = () => {
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                   />
                   {/* Fallback gradient/overlay just in case image fails or to blend */}

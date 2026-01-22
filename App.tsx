@@ -4,12 +4,13 @@ import Hero from './components/Hero';
 import Intro from './components/Intro';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
+import Work from './components/Work';
 import Brands from './components/Brands';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import About from './components/About';
-import ServicesPage from './components/ServicesPage';
+
 import ContactPage from './components/ContactPage';
 
 const App: React.FC = () => {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
             <Intro />
             <Services />
             <WhyUs />
+            <Work />
             <Brands />
             <Testimonials />
             <CTA />
@@ -42,11 +44,7 @@ const App: React.FC = () => {
             <CTA />
           </>
         )}
-        {currentPage === 'services' && (
-          <>
-            <ServicesPage />
-          </>
-        )}
+
         {currentPage === 'contact' && (
           <>
             <ContactPage />
