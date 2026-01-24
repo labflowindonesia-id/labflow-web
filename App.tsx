@@ -31,17 +31,17 @@ const App: React.FC = () => {
             <Intro />
             <Services />
             <WhyUs />
-            <Work />
+            <Work onNavigate={navigate} />
             <Brands />
             <Testimonials />
-            <CTA />
+            <CTA onNavigate={navigate} />
           </>
         )}
         {currentPage === 'about' && (
           <>
-            <About />
+            <About onNavigate={navigate} />
             <Brands />
-            <CTA />
+            <CTA onNavigate={navigate} />
           </>
         )}
 
@@ -51,7 +51,7 @@ const App: React.FC = () => {
           </>
         )}
       </main>
-      <Footer />
+      <Footer onNavigate={navigate} />
     </div>
   );
 };

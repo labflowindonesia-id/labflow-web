@@ -2,23 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ASSETS } from '../constants';
 
-// Pre-generate star data to avoid Math.random() in render
-const generateStars = () => {
-  return [...Array(30)].map((_, i) => {
-    const sizeRandom = Math.random();
-    const size = sizeRandom < 0.3 ? 3 : sizeRandom < 0.6 ? 2 : 1;
-    return {
-      id: i,
-      top: Math.random() * 100,
-      left: Math.random() * 100,
-      size,
-      opacity: Math.random() * 0.5 + 0.2,
-      duration: Math.random() * 4 + 3,
-      delay: Math.random() * 2,
-    };
-  });
-};
-
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen bg-[#050505] pb-20 font-turnkey">
@@ -30,7 +13,11 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={ASSETS.heroBg}
-            alt="LabFlow Hero Background"
+            alt="LabFlow Hero Background - Laboratory Management Dashboard"
+            width="1920"
+            height="1080"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-center lg:scale-105"
           />
           {/* Gradient Overlay for Text Readability */}
@@ -85,13 +72,15 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-[6.5rem] leading-[1.1] font-bold tracking-tight text-white mb-6 max-w-4xl"
+            className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] font-bold tracking-tight text-white mb-6 max-w-4xl"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-phunk-cyan to-phunk-blue inline-block relative">
               Flow
               {/* Subtle glow behind text */}
               <span className="absolute inset-0 blur-2xl bg-phunk-blue/30 -z-10"></span>
-            </span> your Laboratory
+            </span>
+            <br />
+            Your Laboratory
           </motion.h1>
 
           {/* Subtitle */}
@@ -99,7 +88,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="text-lg md:text-xl text-gray-300 max-w-xl mb-12 leading-relaxed"
+            className="text-base md:text-lg text-gray-300 max-w-xl mb-12 leading-relaxed"
           >
             We automate, optimize, and accelerate process flows within your laboratory using a foundation of Automation, AI Agents, or Agentic AI.
           </motion.p>

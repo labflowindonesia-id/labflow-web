@@ -1,7 +1,11 @@
 import React from 'react';
 import { PROJECTS } from '../constants';
 
-const Work: React.FC = () => {
+interface WorkProps {
+  onNavigate: (page: string) => void;
+}
+
+const Work: React.FC<WorkProps> = ({ onNavigate }) => {
   return (
     <section id="work" className="bg-phunk-dark py-20 lg:py-32 text-white relative">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
@@ -16,12 +20,20 @@ const Work: React.FC = () => {
 
         <div className="flex flex-col gap-24">
           {PROJECTS.map((project, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center group">
+            <div
+              key={index}
+              id={project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center group scroll-mt-32"
+            >
               <div className={`${index % 2 !== 0 ? 'lg:order-2' : 'lg:order-1'}`}>
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} - ${project.tags.join(', ')}`}
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                    decoding="async"
                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -38,7 +50,7 @@ const Work: React.FC = () => {
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                   {project.description}
                 </p>
-                <a href={project.link} className="inline-flex items-center gap-2 text-white border-b border-phunk-cyan pb-1 hover:text-phunk-cyan transition-colors">
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="inline-flex items-center gap-2 text-white border-b border-phunk-cyan pb-1 hover:text-phunk-cyan transition-colors">
                   See full case study
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>

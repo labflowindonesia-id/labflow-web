@@ -27,7 +27,7 @@ const Services: React.FC = () => {
                   className={`flex-1 flex flex-col justify-center z-20 ${!isEven && !isLast ? 'lg:order-2 lg:pl-12' : 'lg:pr-12'
                     }`}
                 >
-                  <div className="text-6xl font-bold text-white/5 mb-4 group-hover:text-white/10 transition-colors">{service.number}</div>
+                  <div className="text-6xl font-bold text-white/20 mb-4 group-hover:text-white/10 transition-colors">{service.number}</div>
                   <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-phunk-blue transition-colors">{service.title}</h3>
                   <p className="text-gray-400 text-lg leading-relaxed mb-8">
                     {service.description}

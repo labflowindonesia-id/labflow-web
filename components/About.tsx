@@ -15,7 +15,11 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-const About: React.FC = () => {
+interface AboutProps {
+  onNavigate: (page: string) => void;
+}
+
+const About: React.FC<AboutProps> = ({ onNavigate }) => {
   return (
     <div className="pt-24 lg:pt-32 bg-phunk-dark text-white overflow-hidden selection:bg-phunk-cyan selection:text-black min-h-screen">
 
@@ -53,6 +57,7 @@ const About: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#"
+              onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
               className="group inline-flex items-center justify-center bg-white text-black px-10 py-5 rounded-full font-bold text-lg hover:bg-phunk-cyan transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,229,209,0.5)]"
             >
               Launch LabFlow
@@ -286,10 +291,14 @@ const About: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-phunk-blue to-phunk-cyan rounded-[2.5rem] blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
               <img
                 src="/images/build-by-practitioner.png"
-                alt="Founders at college"
+                alt="LabFlow founders - laboratory practitioners building solutions"
+                loading="lazy"
+                width="800"
+                height="600"
+                decoding="async"
                 className="relative rounded-[2.5rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10"
               />
-              <a href="#" className="absolute bottom-8 right-8 bg-white text-black px-6 py-3 rounded-full font-bold shadow-lg hover:bg-phunk-cyan hover:scale-110 transition-all duration-300">
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="absolute bottom-8 right-8 bg-white text-black px-6 py-3 rounded-full font-bold shadow-lg hover:bg-phunk-cyan hover:scale-110 transition-all duration-300">
                 Talk to us
               </a>
             </div>
@@ -315,7 +324,11 @@ const About: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-phunk-blue rounded-[2.5rem] blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
               <img
                 src="/images/n8n.png"
-                alt="Founders working"
+                alt="n8n automation workflow integration for laboratory processes"
+                loading="lazy"
+                width="800"
+                height="600"
+                decoding="async"
                 className="relative rounded-[2.5rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10"
               />
             </div>
@@ -339,10 +352,14 @@ const About: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-phunk-cyan rounded-[2.5rem] blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
               <img
                 src="/images/auditready.png"
-                alt="Team meeting"
+                alt="Audit-ready laboratory compliance dashboard with ISO 17025 tracking"
+                loading="lazy"
+                width="800"
+                height="600"
+                decoding="async"
                 className="relative rounded-[2.5rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10"
               />
-              <a href="#" className="absolute bottom-8 right-8 bg-black text-white border border-white/20 px-6 py-3 rounded-full font-medium shadow-lg hover:bg-white hover:text-black transition-colors">
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="absolute bottom-8 right-8 bg-black text-white border border-white/20 px-6 py-3 rounded-full font-medium shadow-lg hover:bg-white hover:text-black transition-colors">
                 See how it works
               </a>
             </div>
@@ -374,6 +391,7 @@ const About: React.FC = () => {
               </p>
               <a
                 href="#"
+                onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
                 className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg"
               >
                 Talk to us
@@ -384,7 +402,11 @@ const About: React.FC = () => {
             <div className="relative z-10 w-full lg:w-1/2 flex justify-center lg:absolute lg:right-[-20px] lg:bottom-[-40px] pointer-events-none">
               <img
                 src="/images/flo-love.png"
-                alt="Mascot"
+                alt="Flo - LabFlow AI assistant mascot"
+                loading="lazy"
+                width="450"
+                height="450"
+                decoding="async"
                 className="w-64 md:w-80 lg:w-[450px] object-contain drop-shadow-2xl"
               />
             </div>
@@ -488,10 +510,18 @@ const About: React.FC = () => {
               { step: "03", title: "Integration", desc: "We deploy software, agents, and bridges non-disruptively to get you running fast." },
               { step: "04", title: "Evolution", desc: "Our AI agents learn and optimize your workflow over time, getting smarter as you grow." }
             ].map((item, idx) => (
-              <div key={idx} className="bg-[#111] p-8 rounded-[2rem] text-left shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-white/5 hover:border-phunk-cyan/30 transition-all hover:scale-105 group">
-                <div className="text-6xl font-black text-white/5 mb-4 group-hover:text-phunk-cyan/20 transition-colors">{item.step}</div>
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-phunk-cyan transition-colors">{item.title}</h3>
-                <p className="text-slate-400 mb-6 group-hover:text-slate-200 transition-colors">{item.desc}</p>
+              <div
+                key={idx}
+                className="group relative bg-[#0f0f0f] hover:bg-[#121212] p-8 rounded-[2rem] text-left border border-white/5 hover:border-phunk-cyan transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,229,209,0.15)] hover:-translate-y-2 cursor-pointer overflow-hidden"
+              >
+                {/* Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-phunk-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+
+                <div className="relative z-10">
+                  <div className="text-6xl font-black text-white/20 mb-4 group-hover:text-phunk-cyan/20 transition-colors duration-300">{item.step}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-phunk-cyan transition-colors duration-300">{item.title}</h3>
+                  <p className="text-slate-400 mb-6 group-hover:text-slate-300 transition-colors duration-300 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>

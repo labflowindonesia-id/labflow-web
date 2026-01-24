@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ASSETS } from '../constants';
 
-const CTA: React.FC = () => {
+interface CTAProps {
+  onNavigate: (page: string) => void;
+}
+
+const CTA: React.FC<CTAProps> = ({ onNavigate }) => {
   return (
     <section className="py-20 lg:py-32 px-4 flex justify-center items-center bg-[#050505]">
 
@@ -51,7 +55,7 @@ const CTA: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              We’re ready to get started on your next creative project. All you need to do is hit the button below.
+              We’re ready to get started on your laboratory transformation. Let's hit the button below.
             </p>
           </motion.div>
 
@@ -61,7 +65,7 @@ const CTA: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <a href="#" className="inline-flex items-center justify-center bg-white text-black px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+            <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="inline-flex items-center justify-center bg-white text-black px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-gray-100 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
               Talk to us
             </a>
           </motion.div>

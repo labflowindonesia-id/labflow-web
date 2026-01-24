@@ -34,8 +34,8 @@ const Intro: React.FC = () => {
                 className="absolute inset-0 z-0 opacity-30 rounded-full overflow-hidden"
                 style={{
                   backgroundImage: `
-                    linear-gradient(to right, rgba(0, 229, 209, 0.2) 1px, transparent 1px), 
-                    linear-gradient(to bottom, rgba(0, 229, 209, 0.2) 1px, transparent 1px)
+                    linear-gradient(to right, rgba(0, 229, 209, 0.5) 1px, transparent 1px), 
+                    linear-gradient(to bottom, rgba(0, 229, 209, 0.5) 1px, transparent 1px)
                   `,
                   backgroundSize: '40px 40px',
                   maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
@@ -44,8 +44,8 @@ const Intro: React.FC = () => {
               ></div>
 
               {/* Stronger Blue Glow - Optimized */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-phunk-cyan/30 to-phunk-blue/30 rounded-full blur-2xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-phunk-blue/20 blur-3xl -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-phunk-cyan/30 to-phunk-blue/10 rounded-full blur-2xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-phunk-blue/5 blur-3xl -z-10"></div>
 
               {/* Floating Robot */}
               <motion.img
