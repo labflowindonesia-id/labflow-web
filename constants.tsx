@@ -3,9 +3,9 @@ import { ServiceItem, ProjectItem, TestimonialItem, BrandItem } from './types';
 
 export const ASSETS = {
   logo: (
-    <img src="/resources/LabFlow (3).png" alt="LabFlow Logo" className="h-10 w-auto object-contain" />
+    <img src="/resources/labflow-logo.png" alt="LabFlow Logo" className="h-10 w-auto object-contain" />
   ),
-  robot: "/resources/flo (2).png",
+  robot: "/resources/flo-robot.png",
   heroGraphic: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/650233d59b9a7a16b10beb85_Group%2069.svg",
   heroStars: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/650347cc5ff83f6f05a40af2_Group%2060.svg",
   heroPattern: "https://cdn.prod.website-files.com/6501f1891917bde75ab542ee/65363b2d9ea7b7c5f9c07406_Grid.svg",
@@ -17,7 +17,7 @@ export const SERVICES: ServiceItem[] = [
     number: "01",
     title: "ISO 17025 Compliant",
     description: "Sistem kami dibangun di atas fondasi standar internasional ISO/IEC 17025 untuk menjamin kompetensi teknis laboratorium Anda. Kami memastikan setiap alur kerja, validasi metode, dan pelaporan hasil uji siap diaudit (audit-ready) kapan saja tanpa kerumitan administrasi manual.",
-    image: "/resources/iso17025.png",
+    image: "/resources/iso-17025.png",
     link: "#"
   },
   {
@@ -33,7 +33,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Hilangkan risiko kesalahan input manual dan perhitungan yang berulang. Dengan bantuan otomatisasi cerdas dan validasi AI, LabFlow mengambil alih tugas repetitif, memastikan konsistensi hasil pengujian, dan membiarkan analis Anda fokus pada hal yang paling krusial: akurasi dan presisi analisis.",
     image: "/resources/no-human-error.png",
     link: "#"
-  }
+  },
 ];
 
 export const PROJECTS: ProjectItem[] = [
@@ -41,21 +41,21 @@ export const PROJECTS: ProjectItem[] = [
     title: "LabFlow Assets",
     description: "Monitoring aset menyeluruh dengan jejak audit (audit trail) lengkap. Lacak siklus hidup instrumen dari kalibrasi hingga maintenance, serta manajemen reagen dari pemesanan hingga pemusnahan secara real-time dibantu oleh Flo",
     tags: ["Asset Monitoring", "Audit Trail", "Automation"],
-    image: "/resources/labflow-work1.png",
+    image: "/resources/labflow-work-1.png",
     link: "#"
   },
   {
     title: "AI Integrated LIMS",
     description: "Sistem LIMS custom yang beradaptasi dengan SOP Anda, bukan sebaliknya. Dilengkapi flow otomatis dari quotation hingga customer portal, skill matrix analis, dan compliance ISO 17025.",
     tags: ["ISO 17025", "Custom LIMS", "Flexibility"],
-    image: "/resources/labflow-work2.PNG",
+    image: "/resources/labflow-work-2.png",
     link: "#"
   },
   {
     title: "Flo - AI Chatbot",
     description: "Asisten AI pribadi yang memahami konteks laboratorium Anda. Flo membantu membaca stok inventori, memberikan panduan berbasis manual book/MSDS, dan membuat laporan performa tanpa mengkompromikan keamanan data.",
     tags: ["Private AI", "Safety Assistant", "Instructor"],
-    image: "/resources/labflow-work3.png",
+    image: "/resources/labflow-work-3.png",
     link: "#"
   }
 ];

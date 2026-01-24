@@ -38,7 +38,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="md:col-span-4 lg:col-span-5 space-y-4">
             <div className="w-32">
               <img
-                src="/resources/LabFlow (3).png"
+                src="/resources/labflow-logo.png"
                 alt="LabFlow Indonesia - Laboratory Management Solutions"
                 loading="lazy"
                 width="128"

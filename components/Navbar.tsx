@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
         {/* Left: Logo with Glow */}
         <a href="/" onClick={(e) => handleNavClick(e, 'home')} className={`relative z-50 pointer-events-auto transition-opacity duration-300 ${hasScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
           <img
-            src="/resources/labflow-2.png"
+            src="/resources/labflow-icon.png"
             alt="LabFlow Logo - Laboratory Management Solutions"
             width="120"
             height="48"
