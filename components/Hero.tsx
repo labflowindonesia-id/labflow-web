@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ASSETS } from '../constants';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
     <section className="relative min-h-screen bg-[#050505] pb-20 font-turnkey">
 
@@ -49,6 +53,7 @@ const Hero: React.FC = () => {
           transition={{
             duration: 10,
             repeat: Infinity,
+            repeatType: 'reverse',
             ease: "easeInOut",
             delay: 2
           }}
@@ -99,9 +104,12 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            <a href="#" className="group relative inline-flex items-center justify-center bg-phunk-blue text-white px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:bg-phunk-cyan shadow-[0_0_20px_rgba(37,173,249,0.4)] hover:shadow-[0_0_40px_rgba(0,229,209,0.6)]">
+            <button
+              onClick={() => onNavigate?.('contact')}
+              className="group relative inline-flex items-center justify-center bg-phunk-blue text-white px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:bg-phunk-cyan shadow-[0_0_20px_rgba(37,173,249,0.4)] hover:shadow-[0_0_40px_rgba(0,229,209,0.6)] cursor-pointer"
+            >
               <span className="relative z-10">Let's Flow!</span>
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>

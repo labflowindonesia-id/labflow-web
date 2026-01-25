@@ -27,7 +27,7 @@ const App: React.FC = () => {
       <main>
         {currentPage === 'home' && (
           <>
-            <Hero />
+            <Hero onNavigate={navigate} />
             <Intro />
             <Services />
             <WhyUs />
