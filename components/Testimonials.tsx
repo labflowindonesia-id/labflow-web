@@ -9,7 +9,7 @@ const Testimonials: React.FC = () => {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4 text-white">
-            What our clients think of <span className="bg-clip-text text-transparent bg-gradient-to-r from-phunk-cyan to-phunk-blue">Phunk.</span>
+            What our clients think of <span className="bg-clip-text text-transparent bg-gradient-to-r from-phunk-cyan to-phunk-blue">LabFlow.</span>
           </h2>
           <p className="text-gray-400">
             We’re honest about our skills and abilities — and we’re delighted that our clients agree.
