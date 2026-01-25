@@ -191,7 +191,7 @@ const ContactPage: React.FC = () => {
                 {submitStatus === 'error' && (
                   <p className="text-red-600 font-medium mt-4">Failed to send message. Please try again.</p>
                 )}
-                <p className="text-xs text-slate-500 mt-4">By pressing submit you agree to the Phunk privacy policy</p>
+                <p className="text-xs text-slate-500 mt-4">By pressing submit you agree to the LabFlow privacy policy</p>
               </div>
             </form>
           </div>
